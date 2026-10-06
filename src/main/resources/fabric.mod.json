@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "magicmod",
+  "version": "${version}",
+  "name": "Magic Mod",
+  "description": "Магический мод. Этап 1: рывки и перекаты в стиле souls-like.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.magicmod.MagicMod"],
+    "client": ["com.example.magicmod.client.MagicModClient"]
+  },
+  "mixins": [
+    { "config": "magicmod.client.mixins.json", "environment": "client" }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
